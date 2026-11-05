@@ -1,0 +1,26 @@
+### Cadastrar receita
+POST http://localhost:3000/transacoes
+Content-Type: application/json
+
+{ "descricao": "Salário", "valor": 2500, "tipo": "receita", "categoria": "Trabalho", "consumoConsciente": true }
+
+### Despesa essencial
+POST http://localhost:3000/transacoes
+Content-Type: application/json
+
+{ "descricao": "Conta de Luz", "valor": 180.35, "tipo": "despesa", "categoria": "Moradia", "consumoConsciente": true }
+
+### Gasto por impulso (delivery)
+POST http://localhost:3000/transacoes
+Content-Type: application/json
+
+{ "descricao": "Delivery no fim de semana", "valor": 64.90, "tipo": "despesa", "categoria": "Alimentação", "consumoConsciente": false }
+
+### Gasto por impulso (compra não planejada)
+POST http://localhost:3000/transacoes
+Content-Type: application/json
+
+{ "descricao": "Compra de Roupas", "valor": 199.90, "tipo": "despesa", "categoria": "Lazer", "consumoConsciente": false }
+
+### Histórico + métricas
+GET http://localhost:3000/transacoes
